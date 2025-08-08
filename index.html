@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Focus App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div id="app">
+        <div id="g_id_onload"
+             data-client_id="927895822311-h90pqffafq5gefnoqn5ajl8hufmdcbgo.apps.googleusercontent.com"
+             data-context="signin"
+             data-ux_mode="popup"
+             data-callback="handleCredentialResponse"
+             data-auto_prompt="false">
+        </div>
+
+        <div class="g_id_signin"
+             data-type="standard"
+             data-shape="rectangular"
+             data-theme="outline"
+             data-text="signin_with"
+             data-size="large"
+             data-logo_alignment="left">
+        </div>
+
+        <div id="main-content" style="display: none;">
+            <div id="current-task">
+                <h2>Current Task: <span id="task-title">Loading...</span></h2>
+                <div id="timer"></div>
+            </div>
+            <div id="next-task">
+                <p>Next: <span id="next-task-title">Checking calendar...</span></p>
+            </div>
+            <div id="breathing-exercise-container" style="display: none;">
+                <p>Feeling distracted? Let's recenter.</p>
+                <button onclick="startBreathingExercise()">Breathe</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
